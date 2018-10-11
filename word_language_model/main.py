@@ -61,6 +61,11 @@ device = torch.device("cuda" if args.cuda else "cpu")
 
 corpus = data.Corpus(args.data)
 
+print("Number of tokens:")
+print("Train: ", len(corpus.train))
+print("Valid: ", len(corpus.valid))
+print("Test:  ", len(corpus.test))
+
 # Starting from sequential data, batchify arranges the dataset into columns.
 # For instance, with the alphabet as the sequence and batch size 4, we'd get
 # ┌ a g m s ┐
